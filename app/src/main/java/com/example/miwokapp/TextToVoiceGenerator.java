@@ -41,7 +41,7 @@ public class TextToVoiceGenerator extends AppCompatActivity {
     String[] toLanguageString = {"Hindi", "English", "Spanish", "German", "Russian", "English", "French", "Arabic"};
 
     private static final int requestPermissionCode = 1;
-    int languageCode, fromLanguageCode, toLanguageCode = 0;
+    String languageCode, fromLanguageCode, toLanguageCode = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,9 +95,9 @@ public class TextToVoiceGenerator extends AppCompatActivity {
                 translateTxtView.setText("");
                 if (typeHereTxt.getText().toString().isEmpty()) {
                     Toast.makeText(TextToVoiceGenerator.this, "Please enter the text", Toast.LENGTH_SHORT).show();
-                } else if (fromLanguageCode == 0) {
+                } else if (fromLanguageCode == "") {
                     Toast.makeText(TextToVoiceGenerator.this, "Please select source Language", Toast.LENGTH_SHORT).show();
-                } else if (toLanguageCode == 0) {
+                } else if (toLanguageCode == ""){
                     Toast.makeText(TextToVoiceGenerator.this, "Please select desired Language To Translate", Toast.LENGTH_SHORT).show();
                 } else {
                     getTranslatedText(fromLanguageCode, toLanguageCode, typeHereTxt.getText().toString());
@@ -109,7 +109,7 @@ public class TextToVoiceGenerator extends AppCompatActivity {
             @Override
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    switch (toLanguageCode) {
+                    /*switch (toLanguageCode) {
                         case 11:
                             tts.setLanguage(Locale.ENGLISH);
                         case 22:
@@ -124,7 +124,7 @@ public class TextToVoiceGenerator extends AppCompatActivity {
                             tts.setLanguage(new Locale("ru-RU"));
                         case 17:
                             tts.setLanguage(Locale.FRENCH);
-                    }
+                    }*/
                 }
             }
         });
@@ -141,11 +141,11 @@ public class TextToVoiceGenerator extends AppCompatActivity {
 
     }
 
-    private void getTranslatedText(int fromLanguageCode, int toLanguageCode, String text) {
+    private void getTranslatedText(String fromLanguageCode, String toLanguageCode, String text) {
 
         translateTxtView.setText("Please Wait...");
-        TranslatorOptions options = new TranslatorOptions.Builder().setSourceLanguage(TranslateLanguage.ENGLISH)
-                .setTargetLanguage(TranslateLanguage.GERMAN).build();
+        TranslatorOptions options = new TranslatorOptions.Builder().setSourceLanguage(fromLanguageCode)
+                .setTargetLanguage(toLanguageCode).build();
         Translator translator = Translation.getClient(options);
 
         DownloadConditions conditions = new DownloadConditions.Builder().build();
@@ -175,29 +175,29 @@ public class TextToVoiceGenerator extends AppCompatActivity {
     }
 
 
-    protected int getLanguageCode(String language) {
-        int languageCode = 0;
+    protected String getLanguageCode(String language) {
+        String languageCode = "";
         switch (language) {
             case "English":
-                languageCode = 11;
+                languageCode = TranslateLanguage.ENGLISH;
                 break;
             case "Hindi":
-                languageCode = 22;
+                languageCode = TranslateLanguage.HINDI;
                 break;
             case "Arabic":
-                languageCode = 1;
+                languageCode = TranslateLanguage.ARABIC;
                 break;
             case "Spanish":
-                languageCode = 13;
+                languageCode = TranslateLanguage.SPANISH;
                 break;
             case "German":
-                languageCode = 9;
+                languageCode = TranslateLanguage.GERMAN;
                 break;
             case "Russian":
-                languageCode = 44;
+                languageCode = TranslateLanguage.RUSSIAN;
                 break;
             case "French":
-                languageCode = 17;
+                languageCode = TranslateLanguage.FRENCH;
                 break;
 
             default:
