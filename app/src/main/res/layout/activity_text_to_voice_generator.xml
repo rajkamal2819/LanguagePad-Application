@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TextToVoiceGenerator"
+    android:background="@color/tan_background">
+
+    <TextView
+        android:id="@+id/choose_languge_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Choose the Languages to Translate..."
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/choose_languge_tv">
+
+        <Spinner
+            android:id="@+id/spinnerFrom"
+            android:layout_width="0dp"
+            android:layout_height="33dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/language_arrow" />
+
+        <Spinner
+            android:id="@+id/spinnerTo"
+            android:layout_width="0dp"
+            android:layout_height="33dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1" />
+
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/TypeHereTxt"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#C88C56"
+        android:hint="Type Here..."
+        android:textColorHint="@color/black"
+        android:layout_margin="10dp" />
+
+    <Button
+        android:id="@+id/translateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Translate" />
+
+    <TextView
+        android:id="@+id/translation_textView"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:gravity="center"
+        android:text="Translation"
+        android:layout_margin="10dp"
+        android:background="#C88C56"/>
+
+    <Button
+        android:id="@+id/say_it_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Say It !" />
+
+</LinearLayout>
