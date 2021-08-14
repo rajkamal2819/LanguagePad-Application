@@ -153,6 +153,64 @@ public class ManageTranslationModules extends AppCompatActivity {
 
     protected void deleteModel(TranslateRemoteModel t){
 
+         englishStatus = findViewById(R.id.english_status);
+         hindiStatus = findViewById(R.id.hindi_status);
+         spanishStatus = findViewById(R.id.spanish_status);
+         germanStatus = findViewById(R.id.german_status);
+         russianStatus = findViewById(R.id.russina_status);
+         frenchStatus = findViewById(R.id.french_status);
+         arabicStatus = findViewById(R.id.arabic_status);
+
+        modelManager.getDownloadedModels(TranslateRemoteModel.class)
+                .addOnSuccessListener(new OnSuccessListener<Set<TranslateRemoteModel>>() {
+                    @Override
+                    public void onSuccess(Set<TranslateRemoteModel> translateRemoteModels) {
+
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                // Error.
+            }
+        });
+
+        modelManager.deleteDownloadedModel(t)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                      Toast.makeText(ManageTranslationModules.this,"Deleted Module "+getLanguageType(t),Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(ManageTranslationModules.this,"Failed to delete "+e.getMessage(),Toast.LENGTH_SHORT).show();
+                    }
+                });
+        }
+
+    protected TranslateRemoteModel getModel(String language){
+        TranslateRemoteModel translateRemoteModel = null;
+        switch (language) {
+            case "English": translateRemoteModel = new TranslateRemoteModel.Builder(TranslateLanguage.ENGLISH).build(); break;
+
+            case "Hindi": translateRemoteModel = new TranslateRemoteModel.Builder(TranslateLanguage.HINDI).build();break;
+
+            case "Arabic": translateRemoteModel = new TranslateRemoteModel.Builder(TranslateLanguage.ARABIC).build();break;
+
+            case "Spanish": translateRemoteModel = new TranslateRemoteModel.Builder(TranslateLanguage.SPANISH).build();break;
+
+            case "German": translateRemoteModel = new TranslateRemoteModel.Builder(TranslateLanguage.GERMAN).build();break;
+
+            case "Russian": translateRemoteModel = new TranslateRemoteModel.Builder(TranslateLanguage.RUSSIAN).build();break;
+
+            case "French": translateRemoteModel = new TranslateRemoteModel.Builder(TranslateLanguage.FRENCH).build();break;
+
+        }
+        return translateRemoteModel;
+    }
+
+    protected void deleteModel(TranslateRemoteModel t){
+
         RemoteModelManager modelManager = RemoteModelManager.getInstance();
 
         modelManager.getDownloadedModels(TranslateRemoteModel.class)
