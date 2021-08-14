@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.miwokapp">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,94 +11,119 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MiwokApp">
-        <activity android:name=".TextToVoiceGenerator"
+        <activity
+            android:name=".ManageTranslationModules"
+            android:exported="true" />
+        <activity
+            android:name=".TextToVoiceGenerator"
             android:label="Text To Speech"
             android:parentActivityName=".Languages"
-            android:theme="@style/Theme.otherActivity"/>
-        <activity android:name=".SpanishFamilyMembers"
+            android:theme="@style/Theme.otherActivity" />
+        <activity
+            android:name=".SpanishFamilyMembers"
             android:label="Family Members"
             android:parentActivityName=".SpanishMainActivity"
             android:theme="@style/Theme.otherActivity" />
-        <activity android:name=".SpanishColors"
+        <activity
+            android:name=".SpanishColors"
             android:label="Colors"
             android:parentActivityName=".SpanishMainActivity"
             android:theme="@style/Theme.otherActivity" />
-        <activity android:name=".SpanishPhrases"
+        <activity
+            android:name=".SpanishPhrases"
             android:label="Phrases"
             android:parentActivityName=".SpanishMainActivity"
-            android:theme="@style/Theme.otherActivity"/>
-        <activity android:name=".SpanishNumbers"
+            android:theme="@style/Theme.otherActivity" />
+        <activity
+            android:name=".SpanishNumbers"
             android:label="Numbers"
             android:parentActivityName=".SpanishMainActivity"
-            android:theme="@style/Theme.otherActivity"/>
-        <activity android:name=".SpanishMainActivity"
+            android:theme="@style/Theme.otherActivity" />
+        <activity
+            android:name=".SpanishMainActivity"
             android:label="Spanish"
             android:parentActivityName=".Languages"
-            android:theme="@style/Theme.otherActivity"/>
-        <activity android:name=".RussianPhrases"
+            android:theme="@style/Theme.otherActivity" />
+        <activity
+            android:name=".RussianPhrases"
             android:label="Phrases"
             android:parentActivityName=".RussianMainActivity"
-            android:theme="@style/Theme.otherActivity"/>
-        <activity android:name=".RussianFamilyMembers"
+            android:theme="@style/Theme.otherActivity" />
+        <activity
+            android:name=".RussianFamilyMembers"
             android:label="Family Members"
             android:parentActivityName=".RussianMainActivity"
-            android:theme="@style/Theme.otherActivity"/>
-        <activity android:name=".RussianNumbers"
+            android:theme="@style/Theme.otherActivity" />
+        <activity
+            android:name=".RussianNumbers"
             android:label="Numbers"
             android:parentActivityName=".RussianMainActivity"
-            android:theme="@style/Theme.otherActivity"/>
-        <activity android:name=".RussianColors"
+            android:theme="@style/Theme.otherActivity" />
+        <activity
+            android:name=".RussianColors"
             android:label="Colors"
             android:parentActivityName=".RussianMainActivity"
-            android:theme="@style/Theme.otherActivity"/>
-        <activity android:name=".RussianMainActivity"
+            android:theme="@style/Theme.otherActivity" />
+        <activity
+            android:name=".RussianMainActivity"
             android:label="Russian"
             android:parentActivityName=".Languages"
-            android:theme="@style/Theme.otherActivity"/>
-        <activity android:name=".HindiNumbers"
+            android:theme="@style/Theme.otherActivity" />
+        <activity
+            android:name=".HindiNumbers"
             android:label="Numbers"
             android:parentActivityName=".HindiMainActiviy"
-            android:theme="@style/Theme.otherActivity"/>
-        <activity android:name=".HindiPhrases"
+            android:theme="@style/Theme.otherActivity" />
+        <activity
+            android:name=".HindiPhrases"
             android:label="Phrases"
             android:parentActivityName=".HindiMainActiviy"
-            android:theme="@style/Theme.otherActivity"/>
-        <activity android:name=".HindiMainActiviy"
+            android:theme="@style/Theme.otherActivity" />
+        <activity
+            android:name=".HindiMainActiviy"
             android:label="Hindi"
             android:parentActivityName=".Languages"
-            android:theme="@style/Theme.otherActivity"/>
-        <activity android:name=".HindiFamilyMembers"
+            android:theme="@style/Theme.otherActivity" />
+        <activity
+            android:name=".HindiFamilyMembers"
             android:label="Family Members"
             android:parentActivityName=".HindiMainActiviy"
-            android:theme="@style/Theme.otherActivity"/>
-        <activity android:name=".HindiColors"
+            android:theme="@style/Theme.otherActivity" />
+        <activity
+            android:name=".HindiColors"
             android:label="Colors"
             android:parentActivityName=".HindiMainActiviy"
-            android:theme="@style/Theme.otherActivity"/>
-        <activity android:name=".GermanMainActivity"
+            android:theme="@style/Theme.otherActivity" />
+        <activity
+            android:name=".GermanMainActivity"
             android:label="German"
             android:parentActivityName=".Languages"
-            android:theme="@style/Theme.otherActivity"/>
-        <activity android:name=".GermanPhrases"
+            android:theme="@style/Theme.otherActivity" />
+        <activity
+            android:name=".GermanPhrases"
             android:label="Phrases"
             android:parentActivityName=".GermanMainActivity"
-            android:theme="@style/Theme.otherActivity"/>
-        <activity android:name=".GermanColors"
+            android:theme="@style/Theme.otherActivity" />
+        <activity
+            android:name=".GermanColors"
             android:label="Colors"
             android:parentActivityName=".GermanMainActivity"
-            android:theme="@style/Theme.otherActivity"/>
-        <activity android:name=".GermanFamilyMembers"
+            android:theme="@style/Theme.otherActivity" />
+        <activity
+            android:name=".GermanFamilyMembers"
             android:label="Family Members"
             android:parentActivityName=".GermanMainActivity"
-            android:theme="@style/Theme.otherActivity"/>
-        <activity android:name=".GermanNumbers"
+            android:theme="@style/Theme.otherActivity" />
+        <activity
+            android:name=".GermanNumbers"
             android:label="Numbers"
             android:parentActivityName=".GermanMainActivity"
-            android:theme="@style/Theme.otherActivity"/>
-        <activity android:name=".MiwokMainActivity"
+            android:theme="@style/Theme.otherActivity" />
+        <activity
+            android:name=".MiwokMainActivity"
             android:label="Miwok"
             android:parentActivityName=".Languages"
-            android:theme="@style/Theme.otherActivity"/>
+            android:theme="@style/Theme.otherActivity" />
         <activity
             android:name=".ColorsActivity"
             android:label="@string/color_label"
@@ -119,10 +144,12 @@
             android:label="@string/number_label"
             android:parentActivityName=".MiwokMainActivity"
             android:theme="@style/Theme.otherActivity" />
-        <activity android:name=".Languages"
+        <activity
+            android:name=".Languages"
             android:theme="@style/mainPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

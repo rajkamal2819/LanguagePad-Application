@@ -3,6 +3,7 @@ package com.example.miwokapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
@@ -19,8 +20,10 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.mlkit.common.model.DownloadConditions;
+import com.google.mlkit.common.model.RemoteModelManager;
 import com.google.mlkit.nl.translate.NaturalLanguageTranslateRegistrar;
 import com.google.mlkit.nl.translate.TranslateLanguage;
+import com.google.mlkit.nl.translate.TranslateRemoteModel;
 import com.google.mlkit.nl.translate.Translation;
 import com.google.mlkit.nl.translate.Translator;
 import com.google.mlkit.nl.translate.TranslatorOptions;
@@ -37,6 +40,7 @@ public class TextToVoiceGenerator extends AppCompatActivity {
     private Button sayIt;
     private Spinner toLanguageSpinner;
     private String ttsS = "Error";
+    private Button moduleManage;
     String[] fromLanguageString = {"Hindi", "English", "Spanish", "German", "Russian", "English", "French", "Arabic"};
     String[] toLanguageString = {"Hindi", "English", "Spanish", "German", "Russian", "English", "French", "Arabic"};
 
@@ -109,22 +113,22 @@ public class TextToVoiceGenerator extends AppCompatActivity {
             @Override
             public void onInit(int status) {
                 if (status != TextToSpeech.ERROR) {
-                    /*switch (toLanguageCode) {
-                        case 11:
-                            tts.setLanguage(Locale.ENGLISH);
-                        case 22:
-                            tts.setLanguage(new Locale("hin-IND"));
-                        case 1:
-                            tts.setLanguage(new Locale("ar-DZ"));
-                        case 13:
-                            tts.setLanguage(new Locale("es-AR"));
-                        case 9:
-                            tts.setLanguage(Locale.GERMAN);
-                        case 44:
-                            tts.setLanguage(new Locale("ru-RU"));
-                        case 17:
-                            tts.setLanguage(Locale.FRENCH);
-                    }*/
+                    switch (toLanguageCode) {
+                        case "en":
+                            tts.setLanguage(Locale.ENGLISH); break;
+                        case "hi":
+                            tts.setLanguage(new Locale("hin-IND")); break;
+                        case "ar":
+                            tts.setLanguage(new Locale("ar-DZ")); break;
+                        case "es":
+                            tts.setLanguage(new Locale("es-AR")); break;
+                        case "de":
+                            tts.setLanguage(Locale.GERMAN); break;
+                        case "ru":
+                            tts.setLanguage(new Locale("ru-RU")); break;
+                        case "fr":
+                            tts.setLanguage(Locale.FRENCH); break;
+                    }
                 }
             }
         });
@@ -138,15 +142,25 @@ public class TextToVoiceGenerator extends AppCompatActivity {
             }
         });
 
+        moduleManage = findViewById(R.id.manage_download_modules_button);
+        moduleManage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(TextToVoiceGenerator.this,ManageTranslationModules.class);
+                startActivity(i);
+            }
+        });
 
     }
 
-    private void getTranslatedText(String fromLanguageCode, String toLanguageCode, String text) {
+    Translator translator;
+
+    protected void getTranslatedText(String fromLanguageCode, String toLanguageCode, String text) {
 
         translateTxtView.setText("Please Wait...");
         TranslatorOptions options = new TranslatorOptions.Builder().setSourceLanguage(fromLanguageCode)
                 .setTargetLanguage(toLanguageCode).build();
-        Translator translator = Translation.getClient(options);
+         translator = Translation.getClient(options);
 
         DownloadConditions conditions = new DownloadConditions.Builder().build();
         translator.downloadModelIfNeeded(conditions).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -172,8 +186,8 @@ public class TextToVoiceGenerator extends AppCompatActivity {
                 Toast.makeText(TextToVoiceGenerator.this, "Failed to Translate\nmay be Internet Issues: " + e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-    }
 
+    }
 
     protected String getLanguageCode(String language) {
         String languageCode = "";
@@ -211,6 +225,10 @@ public class TextToVoiceGenerator extends AppCompatActivity {
             tts.stop();
             tts.shutdown();
         }
+        if (translator != null) {
+            translator.close();
+        }
+
         super.onPause();
     }
 
