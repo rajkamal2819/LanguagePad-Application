@@ -41,8 +41,8 @@ public class TextToVoiceGenerator extends AppCompatActivity {
     private Spinner toLanguageSpinner;
     private String ttsS = "Error";
     private Button moduleManage;
-    String[] fromLanguageString = {"Hindi", "English", "Spanish", "German", "Russian", "English", "French", "Arabic"};
-    String[] toLanguageString = {"Hindi", "English", "Spanish", "German", "Russian", "English", "French", "Arabic"};
+    String[] fromLanguageString = {"Hindi", "English", "Spanish", "German", "Russian", "French", "Arabic"};
+    String[] toLanguageString = {"Hindi", "English", "Spanish", "German", "Russian", "French", "Arabic"};
 
     private static final int requestPermissionCode = 1;
     String languageCode, fromLanguageCode, toLanguageCode = "";
@@ -219,6 +219,7 @@ public class TextToVoiceGenerator extends AppCompatActivity {
         }
         return languageCode;
     }
+
 
     public void onPause() {
         if (tts != null) {

@@ -1,43 +1,381 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/language_list_item"
+    android:background="@color/tan_background"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/language_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:text="English"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textAllCaps="true"
-        android:layout_margin="10dp"
-        android:textSize="24sp"/>
+    <LinearLayout
+        android:id="@+id/language_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/delete_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="delete"
-        android:background="#FF0000"
-        android:gravity="center"
-        android:layout_margin="10dp"
-        android:textSize="24sp"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_margin="10dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="5dp">
 
-    <TextView
-        android:id="@+id/download_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="download"
-        android:gravity="center"
-        android:background="	#228B22"
-        android:layout_margin="10dp"
-        android:textSize="24sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#C88C56"
+                android:orientation="vertical">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-</LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="English"
+                        android:layout_weight="2"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"/>
+
+                    <Button
+                        android:id="@+id/english_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="delete"
+                        android:textAllCaps="true"
+                        android:textSize="18dp"
+                        android:layout_margin="10dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/english_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="status"
+                    android:textAllCaps="true"
+                    android:layout_margin="10dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_margin="10dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#C88C56"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hindi"
+                        android:layout_weight="2"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"/>
+
+                    <Button
+                        android:id="@+id/hindi_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="delete"
+                        android:textAllCaps="true"
+                        android:textSize="18dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/hindi_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="status"
+                    android:textAllCaps="true"
+                    android:layout_margin="10dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_margin="10dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#C88C56"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Spanish"
+                        android:layout_weight="2"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"/>
+
+                    <Button
+                        android:id="@+id/spanish_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="delete"
+                        android:textAllCaps="true"
+                        android:textSize="18dp"
+                        android:layout_margin="10dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/spanish_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="status"
+                    android:textAllCaps="true"
+                    android:layout_margin="10dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_margin="10dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#C88C56"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="German"
+                        android:layout_weight="2"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"/>
+
+                    <Button
+                        android:id="@+id/german_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="delete"
+                        android:textAllCaps="true"
+                        android:textSize="18dp"
+                        android:layout_margin="10dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/german_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="status"
+                    android:textAllCaps="true"
+                    android:layout_margin="10dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_margin="10dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#C88C56"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Russian"
+                        android:layout_weight="2"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"/>
+
+                    <Button
+                        android:id="@+id/russian_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="delete"
+                        android:textAllCaps="true"
+                        android:textSize="18dp"
+                        android:layout_margin="10dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/russina_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="status"
+                    android:textAllCaps="true"
+                    android:layout_margin="10dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_margin="10dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#C88C56"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="French"
+                        android:layout_weight="2"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"/>
+
+                    <Button
+                        android:id="@+id/french_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="delete"
+                        android:textAllCaps="true"
+                        android:textSize="18dp"
+                        android:layout_margin="10dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/french_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="status"
+                    android:textAllCaps="true"
+                    android:layout_margin="10dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_margin="10dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#C88C56"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Arabic"
+                        android:textSize="26sp"
+                        android:layout_weight="2"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"/>
+
+                    <Button
+                        android:id="@+id/arabic_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="delete"
+                        android:textAllCaps="true"
+                        android:textSize="18dp"
+                        android:layout_margin="10dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/arabic_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="status"
+                    android:textAllCaps="true"
+                    android:layout_margin="10dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>
