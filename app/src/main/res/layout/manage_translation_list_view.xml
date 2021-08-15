@@ -50,15 +50,15 @@
 
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/english_status"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="status"
-                    android:textAllCaps="true"
-                    android:layout_margin="10dp"
-                    android:textStyle="bold"
-                    android:textSize="18sp"/>
+                    <TextView
+                        android:id="@+id/english_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:text="Downloaded"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -107,10 +107,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="status"
-                    android:textAllCaps="true"
                     android:layout_margin="10dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"/>
+                    android:textSize="15sp"/>
 
             </LinearLayout>
 
@@ -159,10 +158,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="status"
-                    android:textAllCaps="true"
                     android:layout_margin="10dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"/>
+                    android:textSize="15sp"/>
 
             </LinearLayout>
 
@@ -211,10 +209,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="status"
-                    android:textAllCaps="true"
                     android:layout_margin="10dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"/>
+                    android:textSize="15sp"/>
 
             </LinearLayout>
 
@@ -263,10 +260,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="status"
-                    android:textAllCaps="true"
                     android:layout_margin="10dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"/>
+                    android:textSize="15sp"/>
 
             </LinearLayout>
 
@@ -315,10 +311,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="status"
-                    android:textAllCaps="true"
                     android:layout_margin="10dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"/>
+                    android:textSize="15sp"/>
 
             </LinearLayout>
 
@@ -367,10 +362,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="status"
-                    android:textAllCaps="true"
                     android:layout_margin="10dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"/>
+                    android:textSize="15sp"/>
 
             </LinearLayout>
 
