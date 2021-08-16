@@ -16,8 +16,6 @@ import com.google.mlkit.common.model.RemoteModelManager;
 import com.google.mlkit.nl.translate.TranslateLanguage;
 import com.google.mlkit.nl.translate.TranslateRemoteModel;
 
-import java.util.ArrayList;
-import java.util.Locale;
 import java.util.Set;
 
 public class ManageTranslationModules extends AppCompatActivity {
@@ -61,13 +59,13 @@ public class ManageTranslationModules extends AppCompatActivity {
          frenchStatus = findViewById(R.id.french_status);
          russianStatus = findViewById(R.id.russina_status);
 
-         someMethod(getModel("English"));
-         someMethod(getModel("Hindi"));
-         someMethod(getModel("Spanish"));
-         someMethod(getModel("German"));
-         someMethod(getModel("Russian"));
-         someMethod(getModel("Arabic"));
-         someMethod(getModel("French"));
+         checkStatusDownload(getModel("English"));
+         checkStatusDownload(getModel("Hindi"));
+         checkStatusDownload(getModel("Spanish"));
+         checkStatusDownload(getModel("German"));
+         checkStatusDownload(getModel("Russian"));
+         checkStatusDownload(getModel("Arabic"));
+         checkStatusDownload(getModel("French"));
 
          englishDelete.setOnClickListener(new View.OnClickListener() {
              @Override
@@ -79,42 +77,42 @@ public class ManageTranslationModules extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 deleteModel(getModel("Spanish"));
-                spanishStatus.setText("Not Downloaded");
+                spanishStatus.setText(R.string.not_downloaded);
             }
         });
         germanDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 deleteModel(getModel("German"));
-                germanStatus.setText("Not Downloaded");
+                germanStatus.setText(R.string.not_downloaded);
             }
         });
         hindiDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 deleteModel(getModel("Hindi"));
-                hindiStatus.setText("Not Downloaded");
+                hindiStatus.setText(R.string.not_downloaded);
             }
         });
         frenchDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 deleteModel(getModel("French"));
-                frenchStatus.setText("Not Downloaded");
+                frenchStatus.setText(R.string.not_downloaded);
             }
         });
         arabicDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 deleteModel(getModel("Arabic"));
-                arabicStatus.setText("Not Downloaded");
+                arabicStatus.setText(R.string.not_downloaded);
             }
         });
         russianDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 deleteModel(getModel("Russian"));
-                russianStatus.setText("Not Downloaded");
+                russianStatus.setText(R.string.not_downloaded);
             }
         });
 
@@ -193,7 +191,7 @@ public class ManageTranslationModules extends AppCompatActivity {
                 });
         }
 
-        protected void someMethod(TranslateRemoteModel t){
+        protected void checkStatusDownload(TranslateRemoteModel t){
 
             RemoteModelManager modelManager = RemoteModelManager.getInstance();
 
@@ -201,10 +199,10 @@ public class ManageTranslationModules extends AppCompatActivity {
                 @Override
                 public void onSuccess(Boolean aBoolean) {
                     if(aBoolean) {
-                        getTextView(t).setText("Downloaded");
+                        getTextView(t).setText(R.string.downloaded);
                     }
                     else{
-                        getTextView(t).setText("Not Downloaded");
+                        getTextView(t).setText(R.string.not_downloaded);
                     }
                 }
             }).addOnFailureListener(new OnFailureListener() {

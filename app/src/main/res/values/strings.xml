@@ -21,6 +21,17 @@
     <string name="color_label">colors</string>
     <string name="phrases_label">Phrases</string>
 
+    <string name="manageModule_label">Modules</string>
+    <string name="translator_label">Translator</string>
+    <string name="spanish_label">Spanish</string>
+    <string name="russian_label">Russian</string>
+    <string name="hindi_label">Hindi</string>
+    <string name="german_label">German</string>
+    <string name="miwok_label">Miwok</string>
+
+    <string name="downloaded">Downloaded</string>
+    <string name="not_downloaded">Not Downloaded</string>
+
     <string-array name="languages_list">
         <item>German</item>
         <item>Chinese</item>

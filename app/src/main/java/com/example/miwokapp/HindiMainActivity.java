@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class HindiMainActiviy extends AppCompatActivity {
+public class HindiMainActivity extends AppCompatActivity {
 
     CardView numbers;
     CardView family;
@@ -24,7 +24,7 @@ public class HindiMainActiviy extends AppCompatActivity {
         numbers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent numbersIntent = new Intent(HindiMainActiviy.this, HindiNumbers.class);
+                Intent numbersIntent = new Intent(HindiMainActivity.this, HindiNumbers.class);
                 startActivity(numbersIntent);
             }
         });
@@ -33,7 +33,7 @@ public class HindiMainActiviy extends AppCompatActivity {
         family.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent familyIntent = new Intent(HindiMainActiviy.this, HindiFamilyMembers.class);
+                Intent familyIntent = new Intent(HindiMainActivity.this, HindiFamilyMembers.class);
                 startActivity(familyIntent);
             }
         });
@@ -41,7 +41,7 @@ public class HindiMainActiviy extends AppCompatActivity {
         colors.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent colorsIntent = new Intent(HindiMainActiviy.this, HindiColors.class);
+                Intent colorsIntent = new Intent(HindiMainActivity.this, HindiColors.class);
                 startActivity(colorsIntent);
             }
         });
@@ -49,7 +49,7 @@ public class HindiMainActiviy extends AppCompatActivity {
         phrases.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent phrasesIntent = new Intent(HindiMainActiviy.this, HindiPhrases.class);
+                Intent phrasesIntent = new Intent(HindiMainActivity.this, HindiPhrases.class);
                 startActivity(phrasesIntent);
             }
         });

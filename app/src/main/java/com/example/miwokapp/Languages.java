@@ -25,7 +25,7 @@ public class Languages extends AppCompatActivity {
         hindi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              Intent i = new Intent(Languages.this,HindiMainActiviy.class);
+              Intent i = new Intent(Languages.this, HindiMainActivity.class);
               startActivity(i);
             }
         });
@@ -57,7 +57,7 @@ public class Languages extends AppCompatActivity {
         hindi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              Intent i = new Intent(Languages.this,HindiMainActiviy.class);
+              Intent i = new Intent(Languages.this, HindiMainActivity.class);
               startActivity(i);
             }
         });
@@ -73,7 +73,7 @@ public class Languages extends AppCompatActivity {
         tts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              Intent i = new Intent(Languages.this, TextToVoiceGenerator.class);
+              Intent i = new Intent(Languages.this, TranslatorAndVoiceGenerator.class);
               startActivity(i);
             }
         });

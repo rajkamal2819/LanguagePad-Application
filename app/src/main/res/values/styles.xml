@@ -9,6 +9,10 @@
         <item name="colorPrimaryDark">#0000cd</item>
     </style>
 
+    <style name="splash_screen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">#0000cd</item>
+    </style>
+
     <!-- Style for a category of vocabulary words -->
     <style name="CategoryStyle">
         <item name="android:layout_width">match_parent</item>

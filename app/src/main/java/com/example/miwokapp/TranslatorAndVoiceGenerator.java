@@ -6,9 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
-import android.util.Log;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -20,17 +18,14 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.mlkit.common.model.DownloadConditions;
-import com.google.mlkit.common.model.RemoteModelManager;
-import com.google.mlkit.nl.translate.NaturalLanguageTranslateRegistrar;
 import com.google.mlkit.nl.translate.TranslateLanguage;
-import com.google.mlkit.nl.translate.TranslateRemoteModel;
 import com.google.mlkit.nl.translate.Translation;
 import com.google.mlkit.nl.translate.Translator;
 import com.google.mlkit.nl.translate.TranslatorOptions;
 
 import java.util.Locale;
 
-public class TextToVoiceGenerator extends AppCompatActivity {
+public class TranslatorAndVoiceGenerator extends AppCompatActivity {
 
     private EditText typeHereTxt;
     private TextToSpeech tts;
@@ -98,11 +93,11 @@ public class TextToVoiceGenerator extends AppCompatActivity {
             public void onClick(View v) {
                 translateTxtView.setText("");
                 if (typeHereTxt.getText().toString().isEmpty()) {
-                    Toast.makeText(TextToVoiceGenerator.this, "Please enter the text", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TranslatorAndVoiceGenerator.this, "Please enter the text", Toast.LENGTH_SHORT).show();
                 } else if (fromLanguageCode == "") {
-                    Toast.makeText(TextToVoiceGenerator.this, "Please select source Language", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TranslatorAndVoiceGenerator.this, "Please select source Language", Toast.LENGTH_SHORT).show();
                 } else if (toLanguageCode == ""){
-                    Toast.makeText(TextToVoiceGenerator.this, "Please select desired Language To Translate", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TranslatorAndVoiceGenerator.this, "Please select desired Language To Translate", Toast.LENGTH_SHORT).show();
                 } else {
                     getTranslatedText(fromLanguageCode, toLanguageCode, typeHereTxt.getText().toString());
                 }
@@ -146,7 +141,7 @@ public class TextToVoiceGenerator extends AppCompatActivity {
         moduleManage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(TextToVoiceGenerator.this,ManageTranslationModules.class);
+                Intent i = new Intent(TranslatorAndVoiceGenerator.this,ManageTranslationModules.class);
                 startActivity(i);
             }
         });
@@ -157,7 +152,7 @@ public class TextToVoiceGenerator extends AppCompatActivity {
 
     protected void getTranslatedText(String fromLanguageCode, String toLanguageCode, String text) {
 
-        translateTxtView.setText("Please Wait...");
+        translateTxtView.setText("Please Wait...\nDownloading Module");
         TranslatorOptions options = new TranslatorOptions.Builder().setSourceLanguage(fromLanguageCode)
                 .setTargetLanguage(toLanguageCode).build();
          translator = Translation.getClient(options);
@@ -176,14 +171,14 @@ public class TextToVoiceGenerator extends AppCompatActivity {
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(TextToVoiceGenerator.this, "Failed to Translate: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(TranslatorAndVoiceGenerator.this, "Failed to Translate: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(TextToVoiceGenerator.this, "Failed to Translate\nmay be Internet Issues: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(TranslatorAndVoiceGenerator.this, "Failed to Translate\nmay be Internet Issues: " + e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 

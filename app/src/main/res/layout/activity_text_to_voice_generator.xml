@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".TextToVoiceGenerator"
+    tools:context=".TranslatorAndVoiceGenerator"
     android:background="@color/tan_background">
 
     <TextView
@@ -51,16 +51,15 @@
          android:layout_width="match_parent"
          android:layout_height="200dp"
          android:layout_margin="10dp"
-         android:background="@drawable/edit_text_corners"
          app:cardElevation="2dp"
          app:cardCornerRadius="10dp">
     <EditText
+        android:background = "@drawable/edit_text_corners"
         android:id="@+id/TypeHereTxt"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#C88C56"
-        android:hint="Type Here..."
-        android:textColorHint="@color/black" />
+        android:padding="10dp"
+        android:hint="Type Here..." />
      </androidx.cardview.widget.CardView>
 
     <Button
@@ -74,16 +73,22 @@
         android:layout_width="match_parent"
         android:layout_height="140dp"
         android:layout_margin="10dp"
-        android:background="@drawable/edit_text_corners"
         app:cardElevation="2dp"
         app:cardCornerRadius="10dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:background="@drawable/edit_text_corners"
+            android:layout_height="match_parent">
     <TextView
         android:id="@+id/translation_textView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="Translation"
-        android:background="#C88C56"/>
+        android:padding="10dp"
+        android:text="Translation" />
+
+        </ScrollView>
     </androidx.cardview.widget.CardView>
 
     <RelativeLayout
