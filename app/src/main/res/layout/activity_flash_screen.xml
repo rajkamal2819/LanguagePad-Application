@@ -14,7 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="258dp"
-        android:src="@mipmap/app_final_iconn" />
+        android:src="@drawable/app_final_icon" />
 
     <TextView
         android:layout_width="wrap_content"
