@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splash_background"
-    tools:context=".FlashScreen">
+    android:background="@drawable/flash_background"
+    tools:context="com.learn.Language_pad.FlashScreen">
 
     <ImageView
         android:id="@+id/splash_icon"

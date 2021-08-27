@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.miwokapp">
+    package="com.learn.Language_pad">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,153 +12,153 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MiwokApp">
         <activity
-            android:name=".ManageTranslationModules"
+            android:name="com.learn.Language_pad.ManageTranslationModules"
             android:label="@string/manageModule_label"
-            android:parentActivityName=".TranslatorAndVoiceGenerator"
+            android:parentActivityName="com.learn.Language_pad.TranslatorAndVoiceGenerator"
             android:theme="@style/Theme.otherActivity"
             android:exported="true" />
         <activity
-            android:name=".TranslatorAndVoiceGenerator"
+            android:name="com.learn.Language_pad.TranslatorAndVoiceGenerator"
             android:screenOrientation="portrait"
             android:label="@string/translator_label"
-            android:parentActivityName=".Languages"
+            android:parentActivityName="com.learn.Language_pad.Languages"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".SpanishFamilyMembers"
+            android:name="com.learn.Language_pad.SpanishFamilyMembers"
             android:label="@string/family_label"
-            android:parentActivityName=".SpanishMainActivity"
+            android:parentActivityName="com.learn.Language_pad.SpanishMainActivity"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".SpanishColors"
+            android:name="com.learn.Language_pad.SpanishColors"
             android:label="@string/color_label"
-            android:parentActivityName=".SpanishMainActivity"
+            android:parentActivityName="com.learn.Language_pad.SpanishMainActivity"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".SpanishPhrases"
+            android:name="com.learn.Language_pad.SpanishPhrases"
             android:label="@string/phrases_label"
-            android:parentActivityName=".SpanishMainActivity"
+            android:parentActivityName="com.learn.Language_pad.SpanishMainActivity"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".SpanishNumbers"
+            android:name="com.learn.Language_pad.SpanishNumbers"
             android:label="@string/number_label"
-            android:parentActivityName=".SpanishMainActivity"
+            android:parentActivityName="com.learn.Language_pad.SpanishMainActivity"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".SpanishMainActivity"
+            android:name="com.learn.Language_pad.SpanishMainActivity"
             android:screenOrientation="portrait"
             android:label="@string/spanish_label"
-            android:parentActivityName=".Languages"
+            android:parentActivityName="com.learn.Language_pad.Languages"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".RussianPhrases"
+            android:name="com.learn.Language_pad.RussianPhrases"
             android:label="Phrases"
-            android:parentActivityName=".RussianMainActivity"
+            android:parentActivityName="com.learn.Language_pad.RussianMainActivity"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".RussianFamilyMembers"
+            android:name="com.learn.Language_pad.RussianFamilyMembers"
             android:label="@string/family_label"
-            android:parentActivityName=".RussianMainActivity"
+            android:parentActivityName="com.learn.Language_pad.RussianMainActivity"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".RussianNumbers"
+            android:name="com.learn.Language_pad.RussianNumbers"
             android:label="@string/number_label"
-            android:parentActivityName=".RussianMainActivity"
+            android:parentActivityName="com.learn.Language_pad.RussianMainActivity"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".RussianColors"
+            android:name="com.learn.Language_pad.RussianColors"
             android:label="@string/color_label"
-            android:parentActivityName=".RussianMainActivity"
+            android:parentActivityName="com.learn.Language_pad.RussianMainActivity"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".RussianMainActivity"
+            android:name="com.learn.Language_pad.RussianMainActivity"
             android:screenOrientation="portrait"
             android:label="@string/russian_label"
-            android:parentActivityName=".Languages"
+            android:parentActivityName="com.learn.Language_pad.Languages"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".HindiNumbers"
+            android:name="com.learn.Language_pad.HindiNumbers"
             android:label="@string/number_label"
-            android:parentActivityName=".HindiMainActivity"
+            android:parentActivityName="com.learn.Language_pad.HindiMainActivity"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".HindiPhrases"
+            android:name="com.learn.Language_pad.HindiPhrases"
             android:label="@string/phrases_label"
-            android:parentActivityName=".HindiMainActivity"
+            android:parentActivityName="com.learn.Language_pad.HindiMainActivity"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".HindiMainActivity"
+            android:name="com.learn.Language_pad.HindiMainActivity"
             android:screenOrientation="portrait"
             android:label="@string/hindi_label"
-            android:parentActivityName=".Languages"
+            android:parentActivityName="com.learn.Language_pad.Languages"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".HindiFamilyMembers"
+            android:name="com.learn.Language_pad.HindiFamilyMembers"
             android:label="@string/family_label"
-            android:parentActivityName=".HindiMainActivity"
+            android:parentActivityName="com.learn.Language_pad.HindiMainActivity"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".HindiColors"
+            android:name="com.learn.Language_pad.HindiColors"
             android:label="@string/color_label"
-            android:parentActivityName=".HindiMainActivity"
+            android:parentActivityName="com.learn.Language_pad.HindiMainActivity"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".GermanMainActivity"
+            android:name="com.learn.Language_pad.GermanMainActivity"
             android:screenOrientation="portrait"
             android:label="@string/german_label"
-            android:parentActivityName=".Languages"
+            android:parentActivityName="com.learn.Language_pad.Languages"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".GermanPhrases"
+            android:name="com.learn.Language_pad.GermanPhrases"
             android:label="@string/phrases_label"
-            android:parentActivityName=".GermanMainActivity"
+            android:parentActivityName="com.learn.Language_pad.GermanMainActivity"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".GermanColors"
+            android:name="com.learn.Language_pad.GermanColors"
             android:label="@string/color_label"
-            android:parentActivityName=".GermanMainActivity"
+            android:parentActivityName="com.learn.Language_pad.GermanMainActivity"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".GermanFamilyMembers"
+            android:name="com.learn.Language_pad.GermanFamilyMembers"
             android:label="@string/family_label"
-            android:parentActivityName=".GermanMainActivity"
+            android:parentActivityName="com.learn.Language_pad.GermanMainActivity"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".GermanNumbers"
+            android:name="com.learn.Language_pad.GermanNumbers"
             android:label="@string/number_label"
-            android:parentActivityName=".GermanMainActivity"
+            android:parentActivityName="com.learn.Language_pad.GermanMainActivity"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".MiwokMainActivity"
+            android:name="com.learn.Language_pad.MiwokMainActivity"
             android:screenOrientation="portrait"
             android:label="@string/miwok_label"
-            android:parentActivityName=".Languages"
+            android:parentActivityName="com.learn.Language_pad.Languages"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".ColorsActivity"
+            android:name="com.learn.Language_pad.ColorsActivity"
             android:label="@string/color_label"
-            android:parentActivityName=".MiwokMainActivity"
+            android:parentActivityName="com.learn.Language_pad.MiwokMainActivity"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".FamilyActivity"
+            android:name="com.learn.Language_pad.FamilyActivity"
             android:label="@string/family_label"
-            android:parentActivityName=".MiwokMainActivity"
+            android:parentActivityName="com.learn.Language_pad.MiwokMainActivity"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".PhrasesActivity"
+            android:name="com.learn.Language_pad.PhrasesActivity"
             android:label="@string/phrases_label"
-            android:parentActivityName=".MiwokMainActivity"
+            android:parentActivityName="com.learn.Language_pad.MiwokMainActivity"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".NumberActivity"
+            android:name="com.learn.Language_pad.NumberActivity"
             android:label="@string/number_label"
-            android:parentActivityName=".MiwokMainActivity"
+            android:parentActivityName="com.learn.Language_pad.MiwokMainActivity"
             android:theme="@style/Theme.otherActivity" />
         <activity
-            android:name=".Languages"
+            android:name="com.learn.Language_pad.Languages"
             android:screenOrientation="portrait"
             android:theme="@style/mainPage" />
         <activity
-            android:name=".FlashScreen"
+            android:name="com.learn.Language_pad.FlashScreen"
             android:screenOrientation="portrait"
             android:theme="@style/splash_screen">
             <intent-filter>
