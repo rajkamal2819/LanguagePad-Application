@@ -29,6 +29,9 @@ public class ManageTranslationModules extends AppCompatActivity {
     Button russianDelete;
     Button frenchDelete;
     Button arabicDelete;
+    Button chineseDelete;
+    Button japaneseDelete;
+    Button koreanDelete;
     TextView englishStatus;
     TextView germanStatus;
     TextView spanishStatus;
@@ -36,6 +39,9 @@ public class ManageTranslationModules extends AppCompatActivity {
     TextView hindiStatus;
     TextView frenchStatus;
     TextView russianStatus;
+    TextView chineseStatus;
+    TextView japaneseStatus;
+    TextView koreanStatus;
 
 
     @Override
@@ -51,6 +57,9 @@ public class ManageTranslationModules extends AppCompatActivity {
          russianDelete = findViewById(R.id.russian_delete);
         frenchDelete = findViewById(R.id.french_delete);
          arabicDelete = findViewById(R.id.arabic_delete);
+         chineseDelete = findViewById(R.id.chinese_delete);
+         japaneseDelete = findViewById(R.id.japanese_delete);
+         koreanDelete = findViewById(R.id.korean_delete);
 
          englishStatus = findViewById(R.id.english_status);
          germanStatus = findViewById(R.id.german_status);
@@ -59,6 +68,9 @@ public class ManageTranslationModules extends AppCompatActivity {
          hindiStatus = findViewById(R.id.hindi_status);
          frenchStatus = findViewById(R.id.french_status);
          russianStatus = findViewById(R.id.russina_status);
+         chineseStatus = findViewById(R.id.chinese_status);
+         japaneseStatus = findViewById(R.id.japanese_status);
+         koreanStatus = findViewById(R.id.korean_status);
 
          checkStatusDownload(getModel("English"));
          checkStatusDownload(getModel("Hindi"));
@@ -67,6 +79,9 @@ public class ManageTranslationModules extends AppCompatActivity {
          checkStatusDownload(getModel("Russian"));
          checkStatusDownload(getModel("Arabic"));
          checkStatusDownload(getModel("French"));
+         checkStatusDownload(getModel("Chinese"));
+         checkStatusDownload(getModel("Japanese"));
+         checkStatusDownload(getModel("Korean"));
 
          englishDelete.setOnClickListener(new View.OnClickListener() {
              @Override
@@ -117,6 +132,27 @@ public class ManageTranslationModules extends AppCompatActivity {
                 russianStatus.setText(R.string.not_downloaded);
             }
         });
+        chineseDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                deleteModel(getModel("Chinese"));
+                chineseStatus.setText(R.string.not_downloaded);
+            }
+        });
+        japaneseDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                deleteModel(getModel("Japanese"));
+                japaneseStatus.setText(R.string.not_downloaded);
+            }
+        });
+        koreanDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                deleteModel(getModel("Korean"));
+                koreanStatus.setText(R.string.not_downloaded);
+            }
+        });
 
     }
 
@@ -136,6 +172,12 @@ public class ManageTranslationModules extends AppCompatActivity {
             case "ru": languageName = "Russian"; break;
 
             case "fr": languageName = "French"; break;
+
+            case "zh": languageName = "Chinese"; break;
+
+            case "ja": languageName = "Japanese"; break;
+
+            case "ko": languageName = "Korean"; break;
 
         }
         return languageName;
@@ -157,6 +199,12 @@ public class ManageTranslationModules extends AppCompatActivity {
             case "Russian": translateRemoteModel = new TranslateRemoteModel.Builder(TranslateLanguage.RUSSIAN).build();break;
 
             case "French": translateRemoteModel = new TranslateRemoteModel.Builder(TranslateLanguage.FRENCH).build();break;
+
+            case "Chinese": translateRemoteModel = new TranslateRemoteModel.Builder(TranslateLanguage.CHINESE).build();break;
+
+            case "Japanese": translateRemoteModel = new TranslateRemoteModel.Builder(TranslateLanguage.JAPANESE).build();break;
+
+            case "Korean": translateRemoteModel = new TranslateRemoteModel.Builder(TranslateLanguage.KOREAN).build();break;
 
         }
         return translateRemoteModel;
@@ -226,6 +274,9 @@ public class ManageTranslationModules extends AppCompatActivity {
               case "de": txt = germanStatus; break;
               case "ru": txt = russianStatus; break;
               case "fr": txt = frenchStatus; break;
+              case "zh": txt = chineseStatus; break;
+              case "ko": txt = koreanStatus; break;
+              case "ja": txt = japaneseStatus; break;
           }
           return txt;
         }

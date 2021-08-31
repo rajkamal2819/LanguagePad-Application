@@ -37,8 +37,8 @@ public class TranslatorAndVoiceGenerator extends AppCompatActivity {
     private Spinner toLanguageSpinner;
     private String ttsS = "Error";
     private Button moduleManage;
-    String[] fromLanguageString = {"Hindi", "English", "Spanish", "German", "Russian", "French", "Arabic"};
-    String[] toLanguageString = {"Hindi", "English", "Spanish", "German", "Russian", "French", "Arabic"};
+    String[] fromLanguageString = {"Hindi", "English", "Spanish", "German", "Russian", "French", "Arabic","Chinese","Japanese","Korean"};
+    String[] toLanguageString = {"Hindi", "English", "Spanish", "German", "Russian", "French", "Arabic","Chinese","Japanese","Korean"};
 
     private static final int requestPermissionCode = 1;
     String languageCode, fromLanguageCode, toLanguageCode = "";
@@ -124,6 +124,12 @@ public class TranslatorAndVoiceGenerator extends AppCompatActivity {
                             tts.setLanguage(new Locale("ru-RU")); break;
                         case "fr":
                             tts.setLanguage(Locale.FRENCH); break;
+                        case "zh":
+                            tts.setLanguage(Locale.CHINESE);break;
+                        case "ko":
+                            tts.setLanguage(Locale.KOREAN);break;
+                        case "ja":
+                            tts.setLanguage(Locale.JAPANESE);break;
                     }
                 }
             }
@@ -208,6 +214,15 @@ public class TranslatorAndVoiceGenerator extends AppCompatActivity {
                 break;
             case "French":
                 languageCode = TranslateLanguage.FRENCH;
+                break;
+            case "Chinese":
+                languageCode = TranslateLanguage.CHINESE;
+                break;
+            case "Japanese":
+                languageCode = TranslateLanguage.JAPANESE;
+                break;
+            case "Korean":
+                languageCode = TranslateLanguage.KOREAN;
                 break;
 
             default:

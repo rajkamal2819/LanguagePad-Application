@@ -370,6 +370,159 @@
 
         </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_margin="10dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#C88C56"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chinese"
+                        android:textSize="26sp"
+                        android:layout_weight="2"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"/>
+
+                    <Button
+                        android:id="@+id/chinese_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="delete"
+                        android:textAllCaps="true"
+                        android:textSize="18dp"
+                        android:layout_margin="10dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/chinese_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="status"
+                    android:layout_margin="10dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_margin="10dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#C88C56"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Japanese"
+                        android:textSize="26sp"
+                        android:layout_weight="2"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"/>
+
+                    <Button
+                        android:id="@+id/japanese_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="delete"
+                        android:textAllCaps="true"
+                        android:textSize="18dp"
+                        android:layout_margin="10dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/japanese_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="status"
+                    android:layout_margin="10dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_margin="10dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#C88C56"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Korean"
+                        android:textSize="26sp"
+                        android:layout_weight="2"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"/>
+
+                    <Button
+                        android:id="@+id/korean_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="delete"
+                        android:textAllCaps="true"
+                        android:textSize="18dp"
+                        android:layout_margin="10dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/korean_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="status"
+                    android:layout_margin="10dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
     </LinearLayout>
 
 </ScrollView>
